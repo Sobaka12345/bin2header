@@ -126,7 +126,7 @@ int convert(const string fin, string fout, string hname, const bool stdvector) {
 	/* *** START: uppercase header name *** */
 
 	char hname_upper[hname.length() + 2];
-	for (int current = 0; current < len(hname_upper); current++) {
+    for (int current = 0; current < hname.length(); current++) {
 		hname_upper[current] = hname[current];
 		hname_upper[current] = toupper(hname_upper[current]);
 	}
