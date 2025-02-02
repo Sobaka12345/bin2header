@@ -125,13 +125,11 @@ int convert(const string fin, string fout, string hname, const bool stdvector) {
 
 	/* *** START: uppercase header name *** */
 
-	char hname_upper[hname.length() + 2];
-	for (int current = 0; current < len(hname_upper); current++) {
-		hname_upper[current] = hname[current];
-		hname_upper[current] = toupper(hname_upper[current]);
+	string name_upper_h;
+	name_upper_h.reserve(hname.length() + 2);
+    for (auto ch : hname) {
+		name_upper_h.push_back(toupper(ch));
 	}
-
-	string name_upper_h = hname_upper;
 	name_upper_h.append("_H");
 
 	/* *** END: uppercase header name *** */
