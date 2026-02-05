@@ -78,6 +78,15 @@ Options:<br>
 - To build static native binary, run: `./configure --static && make`
 - To build python version, run: `./configure --type=s && make`
 
+## Links
+
+- [Codeberg](https://codeberg.org/AntumDeluge/bin2header)
+- [GitHub](https://github.com/AntumDeluge/bin2header)
+- [GitLab](https://gitlab.com/AntumDeluge/bin2header)
+- [SourceForge](https://sf.net/p/bin2header)
+- [TODO list](TODO.txt)
+- [known bugs](BUGS.txt)
+
 ## Acknowledgements
 
 See: [list of contributors](https://github.com/AntumDeluge/bin2header/graphs/contributors)
