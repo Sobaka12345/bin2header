@@ -181,9 +181,9 @@ int convert(const string fin, string fout, string hname, const bool stdvector) {
 			ofs << eol << "#ifdef __cplusplus" << eol << "#include <vector>" << eol << "#endif" << eol;
 		}
 
-		if (outlen == 32) ofs << eol << "static const unsigned int " << hname << "[] = {" << eol;
-		else if (outlen == 16) ofs << eol << "static const unsigned short " << hname << "[] = {" << eol;
-		else ofs << eol << "static const unsigned char " << hname << "[] = {" << eol;
+		if (outlen == 32) ofs << eol << "static constexpr unsigned int " << hname << "[] = {" << eol;
+		else if (outlen == 16) ofs << eol << "static constexpr unsigned short " << hname << "[] = {" << eol;
+		else ofs << eol << "static constexpr unsigned char " << hname << "[] = {" << eol;
 
 		// empty line
 		cout << endl;
@@ -297,7 +297,7 @@ int convert(const string fin, string fout, string hname, const bool stdvector) {
 
 		ofs << "};" << eol;
 		if (stdvector) {
-			ofs << eol << "#ifdef __cplusplus" << eol << "static const std::vector<unsigned char> "
+			ofs << eol << "#ifdef __cplusplus" << eol << "static constexpr std::vector<unsigned char> "
 					<< hname << "_v(" << hname << ", " << hname << " + sizeof("
 					<< hname << "));" << eol << "#endif" << eol;
 		}

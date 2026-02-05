@@ -585,7 +585,7 @@ def convert(fin, fout, hname="", stdvector=False):
 			data_type = "int"
 		elif outlen == 16:
 			data_type = "short"
-		text += "{0}static const unsigned {1} {2}[] = {{{0}".format(eol, data_type, hname)
+		text += "{0}static constexpr unsigned {1} {2}[] = {{{0}".format(eol, data_type, hname)
 
 		ofs.write(text)
 
@@ -674,7 +674,7 @@ def convert(fin, fout, hname="", stdvector=False):
 
 		text = "}};{0}".format(eol)
 		if stdvector:
-			text += "{0}#ifdef __cplusplus{0}static const std::vector<char> ".format(eol) \
+			text += "{0}#ifdef __cplusplus{0}static constexpr std::vector<char> ".format(eol) \
 			+ hname + "_v(" + hname + ", " + hname + " + sizeof(" + hname \
 			+ "));{0}#endif{0}".format(eol)
 		text +="{0}#endif /* {1} */{0}".format(eol, hname_upper)
